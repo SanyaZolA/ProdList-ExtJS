@@ -1,4 +1,4 @@
-Ext.define('MyApp.view.main.MainController', {
+Ext.define('ProdList-ExtJS.view.main.MainController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.main',
 

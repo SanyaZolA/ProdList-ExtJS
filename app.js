@@ -3,14 +3,14 @@
  * and launch() the Application class.
  */
 Ext.application({
-    extend: 'MyApp.Application',
+    extend: 'ProdList-ExtJS.Application',
 
-    name: 'MyApp',
+    name: 'ProdList-ExtJS',
 
     requires: [
         // This will automatically load all classes in the MyApp namespace
         // so that application classes do not need to require each other.
-        'MyApp.*'
+        'ProdList-ExtJS.*'
     ],  
 
 });

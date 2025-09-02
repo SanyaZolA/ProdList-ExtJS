@@ -1,9 +1,8 @@
 {
-    "name": "MyApp",
-    "namespace": "MyApp",
+    "name": "ProdList-ExtJS",
+    "namespace": "ProdList-ExtJS",
     "version": "1.0.0.0",
     "framework": "ext",
-    "theme": "theme-neptune-touch",
 
     /**
      * The list of required packages (with optional versions; default is "latest").
@@ -71,7 +70,7 @@
          * root namespace, change this to "". Doing so would change the mapping of
          * "MyApp.view.Foo" to "sass/src/MyApp/view/Foo.scss".
          */
-        "namespace": "MyApp",
+        "namespace": "ProdList-ExtJS",
 
         /**
          * Generated sass source settings

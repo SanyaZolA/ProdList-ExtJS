@@ -1,4 +1,4 @@
-Ext.define('MyApp.view.main.Main', {
+Ext.define('ProdList-ExtJS.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
@@ -7,9 +7,9 @@ Ext.define('MyApp.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'MyApp.view.main.MainController',
-        'MyApp.view.main.MainModel',
-        'MyApp.view.main.List'
+        'ProdList-ExtJS.view.main.MainController',
+        'ProdList-ExtJS.view.main.MainModel',
+        'ProdList-ExtJS.view.main.List'
     ],
 
     controller: 'main',
@@ -18,66 +18,47 @@ Ext.define('MyApp.view.main.Main', {
 
     ui: 'navigation',
 
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-
     header: {
         layout: {
-            align: 'stretchmax'
+            align: 'stretchmax',
         },
         title: {
-            bind: {
-                text: '{name}'
-            },
-            flex: 0
+            'text': 'Учёт товаров',
         },
-        iconCls: 'fa-th-list'
-    },
-
-    tabBar: {
-        flex: 1,
-        layout: {
-            align: 'stretch',
-            overflowHandler: 'none'
-        }
-    },
-
-    responsiveConfig: {
-        tall: {
-            headerPosition: 'top'
-        },
-        wide: {
-            headerPosition: 'top'
-        }
-    },
-
-    defaults: {
-        bodyPadding: 20,
-        tabConfig: {
-            responsiveConfig: {
-                wide: {
-                    iconAlign: 'left',
-                    textAlign: 'left'
-                },
-                tall: {
-                    iconAlign: 'top',
-                    textAlign: 'center',
-                    width: 120
-                }
+        items: [
+            {
+            xtype: 'button',
+            text: 'Товары',
+            iconCls: 'fa fa-box',
+            margin: '10 0 10 10',
+            handler: function() {
+                const tabPanel = this.up('app-main');
+                const newTab = tabPanel.add({title: 'Товары', xtype: 'mainlist', closable: true});
+                tabPanel.setActiveTab(newTab);
+                        }
+                    },
+            
+            {
+            xtype: 'button',
+            text: 'Выход',
+            iconCls: 'fa fa-sign-out-alt',
+            margin: '10 10 10 10',
+            handler: function () {
+                const mainView = this.up('app-main'); 
+                mainView.destroy();
+                Ext.create({
+                    xtype: 'login',
+                    renderTo: Ext.getBody()
+                });
             }
-        }
-    },
-
-    items: [{
-        title: 'Товары',
-        items: [{
-            xtype: 'mainlist'
         }]
-    }, {
-        title: 'Выход',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }]
+
+    },
+    items: [
+        {
+            title: 'Товары',
+            xtype: 'mainlist',
+            closable: true
+        },
+    ]
 });

@@ -1,9 +1,9 @@
-Ext.define('MyApp.view.login.Login', {
+Ext.define('ProdList-ExtJS.view.login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'login',
 
     requires: [
-        'MyApp.view.login.LoginController',
+        'ProdList-ExtJS.view.login.LoginController',
         'Ext.form.Panel'
     ],
 

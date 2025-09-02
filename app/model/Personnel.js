@@ -1,5 +1,5 @@
-Ext.define('MyApp.model.Personnel', {
-    extend: 'MyApp.model.Base',
+Ext.define('ProdList-ExtJS.model.Personnel', {
+    extend: 'ProdList-ExtJS.model.Base',
 
     fields: [
         'name', 'email', 'phone'

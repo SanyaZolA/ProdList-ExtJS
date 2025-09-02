@@ -1,13 +1,12 @@
-Ext.define('MyApp.Application', {
+Ext.define('ProdList-ExtJS.Application', {
     extend: 'Ext.app.Application',
 
-    name: 'MyApp',
+    name: 'ProdList-ExtJS',
     views: [
-        'MyApp.view.login.Login',
-        'MyApp.view.main.Main'
+        'ProdList-ExtJS.view.login.Login',
+        'ProdList-ExtJS.view.main.Main'
     ],
     launch: function () {
-        // При старте сразу открываем Login
-        Ext.create('MyApp.view.login.Login');
+        Ext.create('ProdList-ExtJS.view.login.Login');
     }
 });
