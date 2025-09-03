@@ -31,7 +31,7 @@ Ext.define('ProdList-ExtJS.view.login.Login', {
         }, {
             xtype: 'displayfield',
             hideEmptyLabel: false,
-            value: 'Введите Ваш пароль'
+            value: 'Введите Ваш логин и пароль'
         }],
         buttons: [{
             text: 'Войти',

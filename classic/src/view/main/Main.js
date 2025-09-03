@@ -33,11 +33,16 @@ Ext.define('ProdList-ExtJS.view.main.Main', {
             margin: '10 0 10 10',
             handler: function() {
                 const tabPanel = this.up('app-main');
-                const newTab = tabPanel.add({title: 'Товары', xtype: 'mainlist', closable: true});
-                tabPanel.setActiveTab(newTab);
+                const newTab = tabPanel.add({
+                    title: 'Товары',
+                        items: [{
+                            title: 'Список товаров',
+                            xtype: 'mainlist',
+                                }],
+                            closable: true,});
+                                tabPanel.setActiveTab(newTab);
                         }
                     },
-            
             {
             xtype: 'button',
             text: 'Выход',
@@ -52,13 +57,5 @@ Ext.define('ProdList-ExtJS.view.main.Main', {
                 });
             }
         }]
-
-    },
-    items: [
-        {
-            title: 'Товары',
-            xtype: 'mainlist',
-            closable: true
-        },
-    ]
+    }
 });
